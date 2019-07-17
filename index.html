@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Nero materialize</title>
+    <style>
+      nav .badge {
+        position: relative;
+        top: 20px;
+        right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- desktop menu -->
+    <nav class="nav-wrapper indigo">
+      <div class="container">
+        <a href="#" class="brand-logo">NERO</a>
+        <a
+          href="#"
+          data-target="mobile-links"
+          class="sidenav-trigger hide-on-large-only"
+          ><i class="material-icons">menu</i></a
+        >
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Resume</a></li>
+          <li>
+            <a href="#" class="btn-floating indigo darken-3"
+              ><i class="material-icons">notifications</i></a
+            >
+          </li>
+          <li><span class="badge white-text red new">8</span></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- mobile menu -->
+    <ul class="sidenav" id="mobile-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Resume</a></li>
+    </ul>
+    <!-- card -->
+    <div class="container">
+      <div class="row">
+        <dov class="col s12 m6">
+          <div class="card">
+            <div class="card-image">
+              <img src="./images.jpeg" />
+              <a
+                href="#hire"
+                id="button"
+                class="modal-trigger btn-floating halfway-fab red pulse"
+                ><i class="material-icons">book</i></a
+              >
+            </div>
+            <div class="card-content">
+              <span class="card-title"><strong>It's me Nero</strong></span>
+              <span>just your typical teenage badass stylish devil hunter</span>
+            </div>
+            <div class="card-action">
+              <a href="#">Hire me</a>
+              <a href="#">consultency</a>
+            </div>
+          </div>
+        </dov>
+      </div>
+    </div>
+    <!-- collection -->
+    <div class="container">
+      <ul class="collection with-header">
+        <li class="collection-header"><h3>The sparda family</h3></li>
+        <li class="collection-item avatar">
+          <img src="./images.jpeg" class="circle" />
+          <span class="title">Nero</span>
+          <p>the spolied brat</p>
+          <a href="#" class="secondary-content"
+            ><i class="material-icons">send</i></a
+          >
+        </li>
+        <li class="collection-item avatar">
+          <img src="./dante.jpg" class="circle" />
+          <span class="title">Dante</span>
+          <p>the cool one</p>
+          <a href="#" class="secondary-content"
+            ><i class="material-icons">send</i></a
+          >
+        </li>
+        <li class="collection-item avatar">
+          <img src="./vergil.jpg" class="circle" />
+          <span class="title">Vergil</span>
+          <p>the grumpy one</p>
+          <a href="#" class="secondary-content"
+            ><i class="material-icons">send</i></a
+          >
+        </li>
+        <li class="collection-item avatar">
+          <img src="./eva.jpg" class="circle" />
+          <span class="title">Eva</span>
+          <p>the mother</p>
+          <a href="#" class="secondary-content"
+            ><i class="material-icons">send</i></a
+          >
+        </li>
+        <li class="collection-item avatar">
+          <img src="./sparda.jpg" class="circle" />
+          <span class="title">Sparda</span>
+          <p>the father</p>
+          <a href="#" class="secondary-content"
+            ><i class="material-icons">send</i></a
+          >
+        </li>
+      </ul>
+    </div>
+    <!-- modal -->
+    <div class="modal" id="hire">
+      <div class="modal-content">
+        <h1>sorry he's not available</h1>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn modal-close">ok</a>
+      </div>
+    </div>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+      //initilize mobile menu
+      document.addEventListener("DOMContentLoaded", function() {
+        var menu = document.querySelector(".sidenav");
+        M.Sidenav.init(menu);
+      });
+      //initilize modal
+      var button = document.querySelector("#button");
+      var modal = document.querySelector(".modal");
+      button.onClick(M.Modal.init(modal));
+    </script>
+  </body>
+</html>
